@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>breweryDisplay</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ brewery.name }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+        {{ brewery.description }}
+        <div>
+          <ion-button color="primary" size="small" [routerLink]="['/brewery-modify/', brewery.id]">Modify</ion-button>
+          <ion-button color="danger" size="small" (click)="delete(brewery.id)">Delete</ion-button>
+        </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
