@@ -10,7 +10,7 @@
 <ion-content>
   <ion-card *ngFor="let brewery of breweries" [routerLink]="['/brewery-display/', brewery.id]">
     <ion-card-header>
-      <ion-card-title>{{ brewery.title }}</ion-card-title>
+      <ion-card-title>{{ brewery.name }}</ion-card-title>
     </ion-card-header>
   </ion-card>
 </ion-content>
