@@ -15,7 +15,7 @@
       <div>{{ beer.volume }}</div>
       <div>{{ beer.description }}</div>
 
-      <ion-badge color="tertiary">{{ beer.fkBrewery.name }}</ion-badge>
+      <div color="tertiary">{{ beer.fkBrewery.name }}</div>
       <div>
         <ion-button color="primary" size="small" [routerLink]="['/beer-modify/', beer.id]">Modify</ion-button>
         <ion-button color="danger" size="small" (click)="delete(beer.id)">Delete</ion-button>
