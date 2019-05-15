@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Beers
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let beer of beers" [routerLink]="['/beer-display/', beer.id]">
+      <ion-card-header>
+        <ion-card-title>{{ beer.name }}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+</ion-content>

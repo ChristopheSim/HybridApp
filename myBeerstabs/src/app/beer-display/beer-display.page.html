@@ -1,0 +1,25 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>beer-display</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ beer.name }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div>{{ beer.volume }}</div>
+      <div>{{ beer.description }}</div>
+
+      <ion-badge color="tertiary">{{ beer.fkBrewery.name }}</ion-badge>
+      <div>
+        <ion-button color="primary" size="small" [routerLink]="['/beer-modify/', beer.id]">Modify</ion-button>
+        <ion-button color="danger" size="small" (click)="delete(beer.id)">Delete</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
