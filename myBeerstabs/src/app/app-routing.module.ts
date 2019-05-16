@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
-  {path: 'home',loadChildren: './home/home.module#HomePageModule'},
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: 'home',loadChildren: './home/home.module#HomePageModule'},
   { path: 'breweries', loadChildren: './breweries/breweries.module#BreweriesPageModule' },
   { path: 'brewery-display/:id', loadChildren: './brewery-display/brewery-display.module#BreweryDisplayPageModule' },
   { path: 'brewery-modify/:id', loadChildren: './brewery-modify/brewery-modify.module#BreweryModifyPageModule' },
