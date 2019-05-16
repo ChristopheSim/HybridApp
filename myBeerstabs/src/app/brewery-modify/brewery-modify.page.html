@@ -16,7 +16,7 @@
   </ion-item>
 
   <div>
-    <ion-button color="success" (click)="modify()">Modify</ion-button>
+    <ion-button color="success" (click)="modify(); showToast()">Modify</ion-button>
     <ion-button color="danger" [routerLink]="['/breweries']">Cancel</ion-button>
   </div>
 </ion-content>
