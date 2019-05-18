@@ -1,11 +1,11 @@
 export class Brewery {
     public id: number;
     public name: string;
-    public description: string;
+    public address: string;
 
-    constructor(id: number, name: string, description: string) {
+    constructor(id: number, name: string, address: string) {
         this.id = id;
         this.name = name;
-        this.description = description;
+        this.address = address;
     }
 }

@@ -24,7 +24,7 @@ export class BreweryModifyPage implements OnInit {
     this.brewery = this.breweriesServ.getBrewery(this.breweryId);
     this.newBrewery = new Brewery(this.brewery.id,
                                   this.brewery.name,
-                                  this.brewery.description);
+                                  this.brewery.address);
   }
 
   modify() {

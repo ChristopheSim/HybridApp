@@ -11,7 +11,7 @@
     </ion-card-header>
 
     <ion-card-content>
-        {{ brewery.description }}
+        {{ brewery.address }}
         <div>
           <ion-button color="primary" size="small" [routerLink]="['/brewery-modify/', brewery.id]">Modify</ion-button>
           <ion-button color="danger" size="small" (click)="delete(brewery.id)">Delete</ion-button>
