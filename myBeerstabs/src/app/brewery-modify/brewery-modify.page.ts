@@ -34,7 +34,7 @@ export class BreweryModifyPage implements OnInit {
 
   async showToast() {
     const toast = await this.toastController.create({
-      message: 'This beer have been modified !',
+      message: 'This brewery have been modified !',
       duration: 2000
     });
     toast.present();
