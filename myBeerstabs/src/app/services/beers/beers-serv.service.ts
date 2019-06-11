@@ -6,6 +6,8 @@ import { Brewery } from 'src/app/classes/brewery/brewery';
   providedIn: 'root'
 })
 export class BeersServService {
+  public lastId = 2;
+
   private beers: Beer[] = [
     new Beer(1, "Delta IPA", 7.6, "Bière amère", 1),
     new Beer(2, "Orval", 6.5, "Bière de l'abbaye d'Orval", 3)
@@ -35,6 +37,11 @@ export class BeersServService {
         this.beers[index] = newBeer;
       }
     });
+  }
+
+  putBeer(newBeer: Beer) {
+    this.beers.push(newBeer);
+    this.lastId ++;
   }
 
   deleteBeer(id: number) {

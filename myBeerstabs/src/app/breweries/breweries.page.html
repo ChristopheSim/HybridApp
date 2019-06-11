@@ -1,8 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Breweries
-    </ion-title>
+    <ion-title>Breweries</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -13,3 +14,11 @@
     </ion-card-header>
   </ion-card>
 </ion-content>
+
+<ion-footer>
+  <ion-fab vertical="bottom" horizontal="end" activated="true" slot="fixed">
+    <ion-button [routerLink]="['/brewery-create/']">
+      <ion-icon name="add-circle"></ion-icon>
+    </ion-button>
+  </ion-fab>
+</ion-footer>

@@ -5,6 +5,8 @@ import { Brewery } from '../classes/brewery/brewery';
   providedIn: 'root'
 })
 export class BreweriesServService {
+  public lastId = 3;
+
   private breweries: Brewery[] = [
     new Brewery(1, "BBP", "Test"),
     new Brewery(2, "Duvel Moortgat", "Test"),
@@ -33,6 +35,11 @@ export class BreweriesServService {
         this.breweries[index] = newBrewery;
       }
     });
+  }
+
+  putBrewery(newBrewery: Brewery) {
+    this.breweries.push(newBrewery);
+    this.lastId ++;
   }
 
   deleteBrewery(id: number) {
